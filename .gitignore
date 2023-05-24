@@ -1,0 +1,8 @@
+/testApiAndUI/tests/.pytest_cache/
+/.pytest_cache/
+*_cache*
+*-info/
+/instance/
+/venv/
+/.coverage
+.idea
