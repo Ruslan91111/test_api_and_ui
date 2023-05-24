@@ -110,7 +110,23 @@ class TestRegistration:
         response = requests.post(f'{URL}register/', data=data_for_registration)
         assert response.status_code == status_code
         assert result in response.text
-        print(response.json())
+
+
+class TestLogin:
+    """Проверить вход пользователя."""
+    @pytest.mark.parametrize("data_for_login, status_code, result",
+                             [
+                                 ({'email': 'eve.holt@reqres.in', 'password': 'pistol'}, 200, 'token'),
+                                 ({'email': 'rus.holt@reqres.in', 'password': 'password'}, 400, 'user not found'),
+                                 ({'email': '', 'password': 'password'}, 400, 'Missing email or username'),
+                                 ({'email': 'Max@mail.com', 'password': ''}, 400, 'Missing password'),
+                                 ({'email': '', 'password': ''}, 400, 'Missing email or username')
+                             ])
+    def test_registrate(self, data_for_login: dict, status_code: int, result: str) -> None:
+        # Проверка на правильность ввода данных.
+        response = requests.post(f'{URL}login/', data=data_for_login)
+        assert response.status_code == status_code
+        assert result in response.text
 
 
 
