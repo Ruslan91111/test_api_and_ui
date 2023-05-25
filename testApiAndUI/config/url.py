@@ -1,2 +1,2 @@
 class Url:
-    DOMAIN = 'https://reqres.in/api/'
+    DOMAIN = 'https://reqres.in/'
