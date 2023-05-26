@@ -14,13 +14,18 @@ class IndexPage:
         # Найти и нажать нужную кнопку.
         page.locator(button).click()
 
+    def get_the_text_from_link(self, page: Page):
+        # вернуть текст ссылки для перехода на страницу с json.
+        text_from_link = page.locator(self.LINK_TO_API).text_content()
+        return text_from_link
+
     def press_link_to_api(self, page: Page):
         # Нажать на ссылку для перехода на страницу с json.
         page.locator(self.LINK_TO_API).click()
 
-    def get_and_return_the_json_data(self, page: Page):
-        json_data = page.locator(self.LOCATOR_OF_DATA_TO_RESPONSE).text_content()
-        return json_data
+    def get_the_text_after_ui_click(self, page: Page):
+        text_after_ui_click = page.locator(self.LOCATOR_OF_DATA_TO_RESPONSE).text_content()
+        return text_after_ui_click
 
 
 
