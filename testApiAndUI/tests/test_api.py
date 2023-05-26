@@ -50,6 +50,8 @@ class TestSingleUser:
         assert response.json()["data"]["id"] == id
         assert response.json()["data"]["first_name"] == first_name
         assert response.json()["data"]["last_name"] == last_name
+        if response.json()["data"]["id"] == 2:
+            return response.text
 
     @pytest.mark.parametrize("wrong_id, status_code",
                              [(23, 404), (1000, 404), ('some_string', 404)])
