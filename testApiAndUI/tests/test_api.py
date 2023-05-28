@@ -43,15 +43,13 @@ class TestSingleUser:
     """Проверить API с одним пользователем."""
     @pytest.mark.parametrize("id, first_name, last_name",
                              [(1, 'George', 'Bluth'), (2, 'Janet', 'Weaver'), (3, 'Emma', 'Wong')])
-    def test_get_one_user_success(self, id: int, first_name: str, last_name: str) -> None:
+    def test_get_single_user_success(self, id: int, first_name: str, last_name: str):
         # Получить пользователя по id и проверить содержимое ответа.
         response = requests.get(f'{URL}users/{id}')
         assert response.status_code == 200
         assert response.json()["data"]["id"] == id
         assert response.json()["data"]["first_name"] == first_name
         assert response.json()["data"]["last_name"] == last_name
-        if response.json()["data"]["id"] == 2:
-            return response.text
 
     @pytest.mark.parametrize("wrong_id, status_code",
                              [(23, 404), (1000, 404), ('some_string', 404)])

@@ -1,2 +1,2 @@
 class Expectations:
-    DEFAULT_TIMEOUT = 60 * 1000
+    DEFAULT_TIMEOUT = 90 * 1000

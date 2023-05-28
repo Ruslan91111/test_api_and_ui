@@ -1,3 +1,3 @@
-from testApiAndUI.pages.index_page import IndexPage
+from testApiAndUI.pages.main_page import MainPage
 
-index_page = IndexPage()
+main_page = MainPage()
