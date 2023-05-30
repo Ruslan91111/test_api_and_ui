@@ -1,7 +1,7 @@
 """В данном модуле размещена фабрика браузеров, для запуска автотестов в браузерах Chrome или Firefox. """
 import pytest
 from playwright.sync_api import Browser, BrowserContext, Page, sync_playwright
-from testApiAndUI import config
+from test_api_and_ui import config
 
 
 @pytest.fixture()

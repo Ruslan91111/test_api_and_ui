@@ -1,7 +1,7 @@
 import json
 import time
 
-from testApiAndUI.pages import main_page
+from test_api_and_ui.pages import main_page
 import requests
 
 URL = 'https://reqres.in'

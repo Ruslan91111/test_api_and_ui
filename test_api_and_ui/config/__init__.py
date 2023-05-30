@@ -7,9 +7,3 @@ URL = Url()
 playwright = Playwright()
 expectations = Expectations()
 
-
-
-# print(URL)
-# print(playwright)
-# print(expectations)
-#

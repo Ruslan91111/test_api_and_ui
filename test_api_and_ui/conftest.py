@@ -1,5 +1,5 @@
 pytest_plugins = [
-    'testApiAndUI.fixtures.page',
+    'test_api_and_ui.fixtures.page',
 ]
 
 

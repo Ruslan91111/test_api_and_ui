@@ -1,6 +1,7 @@
+"""Работа с главной страницей, на которой расположены кнопки для отправки соответствующего запроса."""
 from typing import Any, Coroutine, Dict
 from playwright.async_api import Page
-from testApiAndUI import config
+from test_api_and_ui import config
 
 
 class MainPage:
