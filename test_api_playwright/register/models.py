@@ -13,9 +13,9 @@ class RegisterUser:
 
 
 class ResponseModel:
-    def __init__(self, status: int, response: dict = None):
+    def __init__(self, status: int, body: dict = None):
         self.status = status
-        self.response = response
+        self.body = body
 
 
 
