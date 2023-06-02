@@ -7,8 +7,8 @@ class Component(ABC):
     """Абстрактный класс, описывающий работу с компонентом на странице."""
     def __init__(self, page: Page, locator: str, name: str) -> None:
         self.page = page
-        self.locator = locator
         self.name = name
+        self.locator = locator
 
     @property
     @abstractmethod
@@ -33,5 +33,4 @@ class Component(ABC):
         with allure.step(f'Checking that {self.type_of} "{self.name}" has text "{text}"'):
             locator = self.get_locator(**kwargs)
             expect(locator).to_have_text(text)
-
 
